@@ -5,6 +5,8 @@
  */
 package info.infomila;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -22,15 +24,23 @@ public class Server {
     public static void main(String[] args) {
         
         final int PORT = 15000;
+
         
+        InterficieGrafica ig = new InterficieGrafica();
         
+      
+    }
+    public static void EngegarServer(){
+        final int PORT = 15000;
         ServerSocket ss;
+
         System.out.print("Inicializando servidor... ");
         try {
             ss = new ServerSocket(PORT);
             System.out.println("\t[OK]");
             int idSession = 0;
             while (true) {
+                System.out.println("PSO PER KI");
                 Socket socket;
                 socket = ss.accept();
                 System.out.println("Nueva conexión entrante: "+socket);
@@ -41,5 +51,6 @@ public class Server {
             //Logger.getLogger(Servidor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
 }
+
+
