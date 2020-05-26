@@ -58,12 +58,10 @@ public class ServidorHilo extends Thread{
         Accions 
         1: llista rutes
         2: llista punts
-        3: descontectar
         */
         
         try {
             accion = dis.readInt();
-            while(accion != 3){
                 switch(accion){
                     case 1:
                         enviarLlistaRutes();
@@ -72,8 +70,6 @@ public class ServidorHilo extends Thread{
                         envriarPunts();
                         break;
                 }
-            }
-            
             /*
             if(accion.equals("hola")){
                 System.out.println("El cliente con idSesion "+this.idSessio+" saluda");
