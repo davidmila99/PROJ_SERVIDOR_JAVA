@@ -19,8 +19,10 @@ public class InterficieGrafica {
     private JFrame frame;
     private JButton bEngegar = new JButton("Engegar");
     private JButton bParar = new JButton("Parar");
+    private Interficie obj;
 
-    public InterficieGrafica() {
+    public InterficieGrafica(Interficie obj) {
+        this.obj = obj;
         frame = new JFrame("RunApp - Gestor Categories");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
@@ -43,7 +45,7 @@ public class InterficieGrafica {
         String opcio = e.getActionCommand();
         switch(opcio){
             case "Engegar":
-                Server.EngegarServer();
+                Server.EngegarServer(obj);
                 break;
             case "Parar":
                 break;
