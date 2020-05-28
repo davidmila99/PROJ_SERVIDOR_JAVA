@@ -34,7 +34,6 @@ public class Server {
         final int PORT = 15000;
 
         Interficie obj;
-        
         try {
             obj = FabricaInterficie.getInterficeRunApp(args[0],args[1]);
             System.out.println("Connexió establerta amb l'origen de dades");
@@ -43,6 +42,24 @@ public class Server {
             ex.printStackTrace();
             return;
         }
+        
+        
+        //Agafem totes les rutes********************************************************************************************
+        /*ArrayList<Ruta> ruts = null;
+        try {
+            ruts = obj.getRutaList();
+            //System.out.println(ruts.toString());
+        } catch (InterficieException ex) {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //Agafem tots els punts d'una ruta***********************************************************************
+        ArrayList<Punt> punts;
+        try {
+            punts = obj.getPutntsRuta(ruts.get(5));
+            System.out.println("PUNTS ***************" + punts.toString());
+        } catch (InterficieException ex) {
+            Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
         
         
         InterficieGrafica ig = new InterficieGrafica(obj);
