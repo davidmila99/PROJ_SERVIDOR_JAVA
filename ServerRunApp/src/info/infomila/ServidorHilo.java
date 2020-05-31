@@ -92,7 +92,7 @@ public class ServidorHilo extends Thread{
             enviaObjecte.writeObject(r.getAlcadaMax());
             enviaObjecte.writeObject(r.getAlcadaMin());
             enviaObjecte.writeObject(r.getDistanciaKm());
-            //enviaObjecte.writeObject(r.getTemsAprox());
+            enviaObjecte.writeObject(r.getTemsAprox());
             enviaObjecte.writeObject(r.isCircular());
             enviaObjecte.writeObject(r.getDificultat());
             enviaObjecte.writeObject(r.getUrlGpx());
@@ -162,7 +162,7 @@ public class ServidorHilo extends Thread{
             enviaObjecte.writeObject(p.getNumero());
             enviaObjecte.writeObject(p.getNom());
             enviaObjecte.writeObject(p.getDesc());
-            //enviaObjecte.writeObject(p.getHora());
+            enviaObjecte.writeObject(p.getHora());
             enviaObjecte.writeObject(p.getLat());
             enviaObjecte.writeObject(p.getLongitud());
             enviaObjecte.writeObject(p.getElevacio());
